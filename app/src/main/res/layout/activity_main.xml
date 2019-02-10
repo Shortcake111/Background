@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:id="@+id/layoutConstraintLayout">
+    <TextView
+            android:text="@android:string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/bgTextView"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editText"/>
+    <TextView
+            android:text="@android:string/paste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintBaseline_toBaselineOf="@+id/editText3"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" app:srcCompat="@drawable/ic_launcher_background"
+            android:id="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editText"
+            app:layout_constraintBottom_toTopOf="@+id/editText3" app:layout_constraintStart_toEndOf="@+id/bgTextView"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" app:layout_constraintVertical_bias="0.20999998"
+            android:layout_marginBottom="8dp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editText3"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintBottom_toTopOf="@+id/imageView" app:layout_constraintStart_toStartOf="@+id/editText"
+    />
+    <android.support.constraint.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                        android:id="@+id/barrier" app:barrierDirection="end"
+                                        tools:layout_editor_absoluteX="411dp"
+                                        app:constraint_referenced_ids="textView4,bgTextView"/>
+</android.support.constraint.ConstraintLayout>
